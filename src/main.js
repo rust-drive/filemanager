@@ -1,2 +1,4 @@
-import { AuthType, createClient } from 'webdav/dist/web/index.js';
+import webdav from 'https://cdn.jsdelivr.net/npm/webdav@5.8.0/+esm'
+
+
 
