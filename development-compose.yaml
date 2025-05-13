@@ -1,0 +1,30 @@
+
+services:
+
+  webdav:
+    image: bytemark/webdav
+    restart: always
+    environment:
+      AUTH_TYPE: Basic
+      USERNAME: john
+      PASSWORD: doe
+      ANONYMOUS_METHODS: OPTIONS
+    volumes:
+      - ./dav:/var/lib/dav
+      - ./webdav-cors.conf:/usr/local/apache2/conf/conf-enabled/cors.conf
+    ports:
+      - "8080:80"
+    command: >
+      sh -c "
+      sed -i '/^#LoadModule rewrite_module/s/^#//' /usr/local/apache2/conf/httpd.conf &&
+      sed -i '/^#LoadModule headers_module/s/^#//' /usr/local/apache2/conf/httpd.conf &&
+      httpd-foreground
+      "
+
+  frontend:
+    image: nginx
+    restart: always
+    volumes:
+      - ./src:/usr/share/nginx/html
+    ports:
+      - "80:80"

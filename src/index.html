@@ -10,20 +10,39 @@
 
 <body>
 
-	<div class="container-fluid">
-<div class="row">
+<div class="container-fluid bg-primary-subtle">
+	<div class="d-flex align-items-center justify-content-between py-2 tertiary-bg">
+		<button class="btn btn-outline-secondary" id="backButton" onclick="goUp()">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+				<path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+			</svg>
+		</button>
+		<div class="breadcrumb-container mx-3 d-none d-md-block">
+			<nav aria-label="breadcrumb">
+				<!-- Here the Breadcrumbs will be listed -->
+				<ol class="breadcrumb mb-0" id="breadcrumbs">
+			
+				</ol>
+
+				<template id="breadcrumb-template">
+					<li class="breadcrumb-item"><a ondblclick="">test</a></li>
+				</template>
+			</nav>
+		</div>
+		<div class="folder-name-only d-block d-md-none" id="folderName">
+			Testordner
+		</div>
+		<button class="btn btn-primary">Search</button>
+	</div>
+</div>
+
+
+<div class="container-fluid">
+
+	
+
+	<div class="row">
 	<div class="col-md-6 col-xl-9 p-0">
-		<nav class="m-3" aria-label="breadcrumb">
-			<!-- Here the Breadcrumbs will be listed -->
-			<ol class="breadcrumb" id="breadcrumbs">
-				
-			</ol>
-
-			<template id="breadcrumb-template">
-				<li class="breadcrumb-item"><a ondblclick="">test</a></li>
-			</template>
-		</nav>
-
 		<!-- Here the files will be listed -->
 		<div class="list-group list-group-flush" id="filelist">
 

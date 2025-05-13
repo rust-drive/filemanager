@@ -1,9 +1,5 @@
-# Nodejs
-/dist
-/node_modules
+#webdav testfiles
+/dav
 
-# Caches
-/.cache
-/.parcel-cache
-
+#MacOS
 .DS_Store
