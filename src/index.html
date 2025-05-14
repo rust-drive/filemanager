@@ -9,8 +9,8 @@
 
 <body class="min-vh-100 d-flex flex-column">
 
-<div class="container-fluid bg-primary-subtle">
-	<div class="d-flex align-items-center justify-content-between py-2 tertiary-bg">
+<div class="container-fluid p-2">
+	<div class="d-flex align-items-center justify-content-between p-2 p-md-1 border rounded bg-body-tertiary">
 
 		<button class="btn" id="backButton" onclick="goUp()">
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
@@ -31,11 +31,15 @@
 			</nav>
 		</div>
 		
-		<div class="folder-name-only d-block d-md-none" id="folderName">
-			Testordner
+		<div class="folder-name-only d-block d-md-none fw-bold fs-5" id="folderName">
+			Ordnername
 		</div>
 		
-		<button class="btn btn-primary">Search</button>
+		<button class="btn btn-primary">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+				<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+			</svg>
+		</button>
 
 	</div>
 </div>

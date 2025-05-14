@@ -1,15 +1,33 @@
 # filemanager
 
-Breaking out the filemanager out of the frontend.
+Filemanager for Webdav, built with HTML and JS. Perfect for static deployment.
 
-Seperate app for filemanagement running on WebDav.
+## Concept
 
-## Setup
+- Compatible with most WebDAV servers
+- Standalaone and Cloud-Integrated Deployment
+- Custom and Fixed Configuration
 
-Install Node.js
+## Development setup
 
-open project folder
+First off all you need to install Docker.
+<https://docs.docker.com/get-started/get-docker/>
 
-run npm init
+Start the Environment with this command:
 
-run npm start
+```bash
+docker compose -f development-compose.yaml up
+```
+
+Stop it with this command:
+
+```bash
+docker compose -f development-compose.yaml down
+```
+
+- Webdav Testserver <http://localhost:8080>
+	- User: john
+	- Pass: doe
+	- Path: /dav
+- Static Server <http://localhost>
+	- Path: /src
