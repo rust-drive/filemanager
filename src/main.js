@@ -8,7 +8,6 @@ const client = createClient(
     }
 );
 
-
 class Path {
 	constructor(input) {
 		// Initialize list from input string or array
