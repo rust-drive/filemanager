@@ -19,7 +19,7 @@
 		</button>
 
 		<div class="breadcrumb-container mx-3 d-none d-md-block">
-			<nav aria-label="breadcrumb">
+			<nav aria-label="breadcrumb" class="border">
 				<!-- Here the Breadcrumbs will be listed -->
 				<ol class="breadcrumb mb-0" id="breadcrumbs">
 			
@@ -41,46 +41,44 @@
 </div>
 
 
-<div class="container-fluid flex-grow-1 d-flex" >
+<div id="content" class="container-fluid flex-grow-1 d-flex" >
 	<div class="row flex-grow-1 d-flex mh-100">
-	<div class="col-md-7 col-xl-9 p-0 align-self-start overflow-scroll">
-		<!-- Here the files will be listed -->
-		<div class="list-group list-group-flush" id="filelist">
 
+		<div class="col-md-7 col-lg-8 col-xl-9 p-2 align-self-start overflow-scroll">
+			
+			<div class="list-group list-group-flush border rounded" id="filelist">
+				<!-- Here the files will be listed -->
+			</div>
+
+			<template id="file-template">
+				<li class="list-group-item list-group-item-action filelist-file">the-text.md</li>
+			</template>
 		</div>
 
-		<template id="file-template">
-			<li class="list-group-item list-group-item-action filelist-file">the-text.md</li>
-		</template>
-	</div>
-	<div class="col-md-5 col-xl-3 pt-3 border-start align-self-stretch ">
-		<!-- Here the Infos will be listed -->
+		<div class="col-md-5 col-lg-4 col-xl-3 p-2 align-self-stretch">
 
-		<div id="inspector">
-
+			<div id="inspector" class="border rounded p-2 h-100">
+				<!-- Here the Infos will be listed -->
+			</div>
 		</div>
+
+		<div id="context-menu-files" class="dropdown-menu" style="width: 16rem;">
+			<a class="dropdown-item disabled" href="#">Open</a>
+			<a class="dropdown-item disabled" href="#">Rename</a>
+			<a class="dropdown-item disabled" href="#">Delete</a>
+			<a id="context-menu-copy" class="dropdown-item" href="#">Copy</a>
+			<a id="context-menu-cut" class="dropdown-item" href="#">Cut</a>
+			<a class="dropdown-item disabled" href="#">Delete</a>
+			<a id="context-menu-download" class="dropdown-item">Download</a>
+		</div>
+
+		<div id="context-menu-empty" class="dropdown-menu" style="width: 16rem;">
+			<a class="dropdown-item disabled" href="#">Upload</a>
+			<a class="dropdown-item disabled" href="#">New</a>
+			<a id="context-menu-paste" class="dropdown-item" href="#">Paste</a>
+		</div>
+
 	</div>
-
-	<div id="context-menu-files" class="dropdown-menu" style="width: 16rem;">
-		<a class="dropdown-item disabled" href="#">Open</a>
-		<a class="dropdown-item disabled" href="#">Rename</a>
-		<a class="dropdown-item disabled" href="#">Delete</a>
-		<a id="context-menu-copy" class="dropdown-item" href="#">Copy</a>
-		<a id="context-menu-cut" class="dropdown-item" href="#">Cut</a>
-		<a class="dropdown-item disabled" href="#">Delete</a>
-		<a id="context-menu-download" class="dropdown-item">Download</a>
-	</div>
-
-	<div id="context-menu-empty" class="dropdown-menu" style="width: 16rem;">
-		<a class="dropdown-item disabled" href="#">Upload</a>
-		<a class="dropdown-item disabled" href="#">New</a>
-		<a id="context-menu-paste" class="dropdown-item" href="#">Paste</a>
-	</div>
-
-</div>
-
-
-
 </div>
 
 </body>
