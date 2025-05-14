@@ -8,11 +8,11 @@
 </head>
 
 
-<body>
+<body class="min-vh-100 d-flex flex-column">
 
 <div class="container-fluid bg-primary-subtle">
 	<div class="d-flex align-items-center justify-content-between py-2 tertiary-bg">
-		<button class="btn btn-outline-secondary" id="backButton" onclick="goUp()">
+		<button class="btn" id="backButton" onclick="goUp()">
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
 				<path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
 			</svg>
@@ -25,7 +25,7 @@
 				</ol>
 
 				<template id="breadcrumb-template">
-					<li class="breadcrumb-item"><a ondblclick="">test</a></li>
+					<li class="breadcrumb-item"><a onclick="">test</a></li>
 				</template>
 			</nav>
 		</div>
@@ -37,12 +37,9 @@
 </div>
 
 
-<div class="container-fluid">
-
-	
-
+<div class="container-fluid flex-grow-1" >
 	<div class="row">
-	<div class="col-md-6 col-xl-9 p-0">
+	<div class="col-md-7 col-xl-9 p-0">
 		<!-- Here the files will be listed -->
 		<div class="list-group list-group-flush" id="filelist">
 
@@ -52,7 +49,7 @@
 			<li class="list-group-item list-group-item-action filelist-file">the-text.md</li>
 		</template>
 	</div>
-	<div class="col-md-6 col-xl-3 mt-3">
+	<div class="col-md-5 col-xl-3 pt-3 border">
 		<!-- Here the Infos will be listed -->
 
 		<div id="inspector">
