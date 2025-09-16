@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>rustdrive</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+</head>
+
+<body class="min-vh-100 d-flex flex-column">
+
+<div class="container-fluid p-2">
+	<div class="d-flex align-items-center justify-content-between p-2 p-md-1 border rounded bg-body-tertiary">
+
+		<button class="btn" id="backButton" onclick="goUp()">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+				<path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+			</svg>
+		</button>
+
+		<div class="breadcrumb-container mx-3 d-none d-md-block">
+			<nav aria-label="breadcrumb" class="border">
+				<!-- Here the Breadcrumbs will be listed -->
+				<ol class="breadcrumb mb-0" id="breadcrumbs">
+			
+				</ol>
+
+				<template id="breadcrumb-template">
+					<li class="breadcrumb-item"><a onclick="">test</a></li>
+				</template>
+			</nav>
+		</div>
+		
+		<div class="folder-name-only d-block d-md-none fw-bold fs-5" id="folderName">
+			Ordnername
+		</div>
+		
+		<button class="btn btn-primary">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+				<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+			</svg>
+		</button>
+
+	</div>
+</div>
+
+
+<div id="content" class="container-fluid flex-grow-1 d-flex" >
+	<div class="row flex-grow-1 d-flex mh-100">
+
+		<div class="col-md-7 col-lg-8 col-xl-9 p-2 align-self-start overflow-scroll">
+			
+			<div class="list-group list-group-flush border rounded" id="filelist">
+				<!-- Here the files will be listed -->
+			</div>
+
+			<template id="file-template">
+				<li class="list-group-item list-group-item-action filelist-file">the-text.md</li>
+			</template>
+		</div>
+
+		<div class="col-md-5 col-lg-4 col-xl-3 p-2 align-self-stretch">
+
+			<div id="inspector" class="border rounded p-2 h-100">
+				<!-- Here the Infos will be listed -->
+			</div>
+		</div>
+
+		<div id="context-menu-files" class="dropdown-menu" style="width: 16rem;">
+			<a class="dropdown-item disabled" href="#">Open</a>
+			<a class="dropdown-item disabled" href="#">Rename</a>
+			<a class="dropdown-item disabled" href="#">Delete</a>
+			<a id="context-menu-copy" class="dropdown-item" href="#">Copy</a>
+			<a id="context-menu-cut" class="dropdown-item" href="#">Cut</a>
+			<a class="dropdown-item disabled" href="#">Delete</a>
+			<a id="context-menu-download" class="dropdown-item">Download</a>
+		</div>
+
+		<div id="context-menu-empty" class="dropdown-menu" style="width: 16rem;">
+			<a class="dropdown-item disabled" href="#">Upload</a>
+			<a class="dropdown-item disabled" href="#">New</a>
+			<a id="context-menu-paste" class="dropdown-item" href="#">Paste</a>
+		</div>
+
+	</div>
+</div>
+
+</body>
+
+<script type="module" src="main.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
