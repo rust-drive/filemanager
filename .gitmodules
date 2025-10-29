@@ -1,0 +1,3 @@
+[submodule "lib/rustdrive"]
+	path = lib/rustdrive
+	url = git@github.com:rust-drive/rustdrive-js.git
